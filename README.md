@@ -1,4 +1,4 @@
-# [Space Invaders Game](https://github.com/johnstat101/my-gallery-app)
+# [My Gallerly](https://github.com/johnstat101/my-gallery-app)
 
 ## By John Kimani
 
