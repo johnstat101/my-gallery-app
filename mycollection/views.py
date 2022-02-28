@@ -8,8 +8,8 @@ def index(request):
     return render(request, 'index.html', {'images': images[::-1], 'locations': locations})
 
 
-def image_location(request, location):
-    images = Image.filter_by_location(location)
+def image_location(request, image_location):
+    images = Image.filter_by_location(image_location)
     return render(request, 'location.html', {'location_images': images})
 
 # search
@@ -20,7 +20,7 @@ def search(request):
         searched_images = Image.search_image(search_term)
         message = f"{search_term}"
 
-        return render(request, 'search.html',{"message":message,"categories": searched_images})
+        return render(request, 'search.html', {"message":message,"categories": searched_images})
 
     else:
         message = "You haven't searched for any term"
