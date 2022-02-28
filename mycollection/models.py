@@ -2,7 +2,7 @@ from django.db import models
 
 # Category Model
 class Category(models.Model):
-    image_category = models.CharField(max_length=30)
+    image_category = models.CharField(max_length=50)
 
     def __str__(self):
         return self.image_category
@@ -15,7 +15,7 @@ class Category(models.Model):
 
 # Location Model
 class Location(models.Model):
-    image_location = models.CharField(max_length=30)
+    image_location = models.CharField(max_length=50)
 
     def __str__(self):
         return self.image_location
@@ -39,8 +39,8 @@ class Location(models.Model):
 # image model
 class Image(models.Model):
     image = models.ImageField(upload_to = "images/")
-    image_name = models.CharField(max_length=30)
-    image_description = models.TextField(max_length=100)
+    image_name = models.CharField(max_length=50)
+    image_description = models.TextField(max_length=1000)
     image_location = models.ForeignKey(Location,on_delete=models.CASCADE)
     image_category = models.ForeignKey(Category,on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
