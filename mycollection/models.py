@@ -9,6 +9,9 @@ class Category(models.Model):
 
     def save_category(self):
         self.save()
+    
+    def delete_category(self):
+        self.delete()
 
 # Location Model
 class Location(models.Model):
@@ -20,6 +23,18 @@ class Location(models.Model):
     def save_location(self):
         self.save()
 
+    def delete_location(self):
+        self.delete()
+    
+    @classmethod
+    def update_location(cls, id, value):
+        cls.objects.filter(id=id).update(image=value)
+    
+    @classmethod
+    def get_locations(cls):
+        locations = Location.objects.all()
+        return locations
+
 
 # image model
 class Image(models.Model):
@@ -28,25 +43,36 @@ class Image(models.Model):
     image_description = models.TextField(max_length=100)
     image_location = models.ForeignKey(Location,on_delete=models.CASCADE)
     image_category = models.ForeignKey(Category,on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.image_name
+    
     def save_image(self):
         self.save()
 
     def delete_image(self):
         self.delete()
+    
+    class Meta:
+        ordering = ['date']
+
+    @classmethod
+    def filter_by_location(cls, location):
+        image_location = Image.objects.filter(location__name=image_location).all()
+        return image_location
+
+    @classmethod
+    def update_image(cls, id, value):
+        cls.objects.filter(id=id).update(image=value)
 
     @classmethod
     def get_image_by_id(cls, id):
-        image = cls.objects.filter(id = id)
+        image = cls.objects.filter(id=id).all()
         return image
-    
+
     @classmethod
-    def filter_by_location(cls,location):
-        image = cls.objects.filter(image_location = location)
-        return image
-    
-    @classmethod
-    def search_image(cls,category):
-        image = cls.objects.filter(image_category=category)
-        return image
+    def search_by_category(cls, category):
+        images = cls.objects.filter(category__name__icontains = image_category)
+        return images
 
