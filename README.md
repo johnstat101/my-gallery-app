@@ -4,15 +4,15 @@
 
 ## Description
 
-This project entails remake of the Space Invaders Game using Python. Space Invaders is a two-dimensional fixed shooter game in which the player controls a canon by moving it horizontally across the bottom of the screen and firing at descending aliens. The aim is to defeat the aliens that move horizontally back and forth across the screen as they advance towards the bottom of the screen.
+This project entails developing a personal gallery application that display my photos for others to see
 
-User's Story:
+As a user of the application I should be able to:
 
-* As the player you control a laser cannon to battle rows of alien invaders 
-* The laser cannon can only move horizontally across the bottom of the screen.
-* The aliens move back and forth, and slowly descending upon the player
-* The player defeats an alien by shooting it with the laser cannon and earns points
-* The game ends if the aliens reach the cannon
+* View different photos that interest me.
+* Click on a single photo to expand it and also view the details of the photo.
+* Search for different categories of photos.
+* Copy a link to the photo to share with my friends.
+* View photos based on the location they were taken.
 
 ### Prerequisites
 
@@ -20,6 +20,7 @@ You need the following to start working on the project on your local computer:
 
 * A computer running on either Windows, MacOS or Ubuntu operating system installed with the following:
 -Python version 3.9
+-Django
 
 ```
 
@@ -35,6 +36,7 @@ You need the following to start working on the project on your local computer:
 ## Technologies Used
 
 * Python v3.9
+* Django
 
 ## License
 
