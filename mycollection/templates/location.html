@@ -3,8 +3,15 @@
 <!--  -->
 {% block content %}
 <div class="container">
-    <h2> Gallery</h2>
-    <hr>
+    <div class="row">
+        <div class="col-md-7">
+            <h2>Location Gallery</h2>
+        </div>
+        <div class="col-md-5">
+            <a href="{% url 'index'%}" class="btn btn-info">Back</a>
+        </div>
+        <hr>
+    </div>
     <!--  -->
     {% if location_images %}
     <div class="card-columns">
