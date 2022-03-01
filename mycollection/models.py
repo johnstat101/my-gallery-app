@@ -15,7 +15,7 @@ class Category(models.Model):
 
 
 class Location(models.Model):
-    name = models.CharField(max_length=60)
+    name = models.CharField(max_length=50)
 
     @classmethod
     def get_locations(cls):
@@ -38,9 +38,9 @@ class Location(models.Model):
 
 class Image(models.Model):
     image = models.ImageField(upload_to='images/')
-    name = models.CharField(max_length=60)
-    description = models.TextField()
-    author = models.CharField(max_length=40, default='admin')
+    name = models.CharField(max_length=50)
+    description = models.TextField(max_length=1000)
+    author = models.CharField(max_length=50, default='admin')
     date = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
