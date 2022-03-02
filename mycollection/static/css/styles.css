@@ -1,37 +1,46 @@
-h2 {
-    color: white;
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+}
+
+h2,
+h3 {
     margin-top: 2%;
     font-size: 35px;
     font-family: 'Special Elite', cursive;
 }
 
-.boded {
-    background-image: url(/static/images/bg.jpeg);
-    padding-top: 2%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+div.col-xs-6.col-sm-6.col-md-4.col-lg-3 {
+    padding: 0px;
+    padding-bottom: 10px;
 }
 
-.overlay {
-    margin: 0;
-    padding: 0;
-    background-color: rgba(49, 83, 15, 0.3);
+.wrap {
+    margin-top: 3em;
 }
 
-.imagea {
-    margin-top: 34%;
-    font-size: 45px;
-    font-weight: bolder;
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-wrap {
+    padding: 0 4px;
+}
+
+div.modal-dialog {
+    min-width: 1000px;
+    min-height: 600px;
+}
+
+div.modal-content {
+    min-width: 800px;
+    min-height: 600px;
 }
 
 a {
     text-decoration: none;
-}
-
-.image {
-    font-family: 'Special Elite', cursive;
-    margin-bottom: 18%;
 }
 
 body {
@@ -41,18 +50,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-.modalcard {
-    background-color: rgba(10, 10, 10, 0.8);
-    color: white;
-    padding: 3%;
-    border: none;
-}
-
-h3 {
-    color: white;
-    font-family: 'Special Elite', cursive;
 }
 
 #locations {
