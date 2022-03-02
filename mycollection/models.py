@@ -64,9 +64,6 @@ class Image(models.Model):
         images = cls.objects.filter(category__icontains=category)
         return images
 
-    def __str__(self):
-        return self.name
-
     def save_image(self):
         self.save()
 
