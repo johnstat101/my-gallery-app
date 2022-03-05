@@ -1,0 +1,80 @@
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+}
+
+h2,
+h3 {
+    margin-top: 2%;
+    font-size: 35px;
+    font-family: 'Special Elite', cursive;
+}
+
+div.col-xs-6.col-sm-6.col-md-4.col-lg-3 {
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+.wrap {
+    margin-top: 3em;
+}
+
+.image,
+img {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-wrap {
+    padding: 0 4px;
+    width: 100%;
+    height: 200px;
+}
+
+div.modal-dialog {
+    min-width: 600px;
+    min-height: 500px;
+}
+
+div.modal-content {
+    min-width: 400px;
+    min-height: 400px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#locations {
+    color: white;
+    font-family: 'Special Elite', cursive;
+}
+
+hr {
+    background: white;
+    height: 2px;
+}
+
+#imageheader {
+    font-family: 'Yeseva One', cursive;
+}
+
+.imgdesc {
+    font-family: 'Vollkorn', serif;
+}
+
+#found {
+    margin-bottom: 3%;
+}
+
+#btn {
+    margin-right: 6px;
+}
+
+.cat {
+    float: center;
+    background: gray;
+    padding: 4px;
+    border-radius: 6px;
+}
